@@ -240,6 +240,8 @@
         width: 422px;
         margin-right: 24px;
         padding: 14px 16px;
+        outline-color: #FF3F3A;
+        border: 1px solid #D7DADD;
     }
 
     &__btn {
@@ -497,14 +499,15 @@
         box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
         border-radius: 4px;
         transition: all .3s ease-in-out;
+
         &:hover {
-            transform: scale(1.01   );
+            transform: scale(1.01);
             box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.16), 0px 30px 24px -10px rgba(154, 156, 165, 0.1), 0px 12px 10px -6px rgba(154, 156, 165, 0.08), 0px 4px 4px -4px rgba(30, 33, 44, 0.05);
         }
     }
 
     &__item-box {
-        padding: 33px;       
+        padding: 33px;
 
         a {
             display: block;
@@ -515,23 +518,28 @@
         max-width: 112px;
         width: 100%;
         font-size: 14px;
-        color: #fff;        
+        color: #fff;
         text-align: center;
         border-radius: 4px;
         margin-bottom: 15px;
     }
+
     &__item-spec--green {
         background-color: #03cea4;
     }
+
     &__item-spec--blue {
         background-color: #5a87fc;
     }
+
     &__item-spec--orange {
         background-color: #f3982f;
     }
+
     &__item-spec--rose {
         background-color: #f13571;
     }
+
     &__item-course {
         max-width: 322px;
         width: 100%;
@@ -543,22 +551,126 @@
         display: flex;
         font-size: 18px;
         line-height: 27px;
-        
+
     }
+
     &__author {
         color: #787A80;
     }
+
     &__price {
         margin-right: 6px;
         color: $accent;
         font-weight: 700;
     }
+
     &__list {
         display: grid;
         grid-auto-flow: dense;
-        grid-template-columns: repeat( auto-fit, minmax(470px, 2fr) );      
+        grid-template-columns: repeat(auto-fit, minmax(470px, 2fr));
         gap: 30px;
     }
+}
+
+
+.benefits {
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 140px;
+        // justify-content: center;
+        // align-items: center;
+        // margin: 0 auto;
+        // text-align: center;
+    }
+
+    &__title-box {
+        margin: 0 auto;
+        text-align: center;
+        max-width: 405px;
+        width: 100%;
+        margin-bottom: 70px;
+
+    }
+
+    &__suptitle {
+        font-weight: 700;
+        color: $title;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    &__title {
+        @extend %title;
+    }
+
+    &__tab {
+        margin-bottom: 90px;
+        display: flex;
+        text-align: center;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    &__tab-item {
+        padding: 10px 71px;
+        flex-basis: 100%;
+        color: #9A9CA5;
+        font-weight: 700;
+        border: 1px solid transparent;
+        transition: all .2s;   
+        position: relative;      
+        
+        svg {
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            left: 44px;
+            top: 14px;     
+    
+        }
+        &:hover {
+            border: 1px solid $accent;
+            border-radius: 4px;
+            color: $accent;
+            box-shadow: 0px 80px 80px -20px rgba(255, 63, 58, 0.16), 0px 30px 24px -10px rgba(255, 63, 58, 0.1), 0px 12px 10px -6px rgba(255, 63, 58, 0.08), 0px 4px 4px -4px rgba(30, 33, 44, 0.05);
+
+            svg {
+                stroke: #FF3F3A;
+                
+            }
+        }
+
+    }
+    &__content-item{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        display: none;
+        &.benefits__content-item--active {
+            display: flex;
+        }
+    }
+    &__content-info {
+        max-width: 495px;
+        width: 100%;
+    }
+    &__content-title {
+        font-size: 32px;
+        line-height: 42px;
+        font-weight: 900;
+        color: $title;
+        margin-bottom: 24px;
+    }
+    &__content-text {
+        margin-bottom: 15px;
+    }
+    &__image {
+        object-fit: cover;
+    }
+ 
 }
 
 @import 'media';
