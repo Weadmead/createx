@@ -245,6 +245,7 @@
     &__btn {
         padding: 0 40px;
         cursor: pointer;
+        border: 1px solid #FF3F3A;
     }
 
     &-left__img,
@@ -310,19 +311,24 @@
         font-weight: 900;
         margin-bottom: 44px;
     }
-
-    &__btn {
-        padding-top: 15px;
-        padding-bottom: 15px;
+    &__btn-box {
+        display: flex;
+        justify-content: start;
+    }   
+    &__btn {    
         transition: all .3s ease-in-out;
         width: 100%;
-
+        max-width: 201px;
         &:hover {
             transform: scale(1.04);
         }
 
         &+.btn {
             margin-left: 15px;
+        }
+        &.btn-white {
+            max-width: 148px;
+            width: 100%;
         }
 
     }
@@ -341,12 +347,11 @@
         display: flex;
         justify-content: space-between;
         flex-basis: 100%;
+
         li {
             display: flex;
             align-items: center;
             position: relative;
-
-
         }
 
         li+li {
@@ -378,6 +383,74 @@
         flex-basis: 100%;
         text-align: center;
     }
+}
+
+.about {
+    &__inner {
+        padding: 180px 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__info-box {
+        margin-left: 135px;
+    }
+
+    &__suptitle {
+        text-transform: uppercase;
+        color: $title;
+        margin-bottom: 8px;
+    }
+
+    &__title {
+        @extend %title;
+        margin-bottom: 40px;
+    }
+
+    &__list {
+        width: 380px;
+
+        li {
+            padding-left: 32px;
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        li:before {
+            content: "";
+            position: absolute;
+            background-image: url(../images/about-icon.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 15px;
+            height: 15px;
+            left: 0;
+            top: 5px;
+
+
+        }
+    }
+    &__btn {    
+        max-width: 161px;
+        width: 100%;
+        display: flex;
+        padding: 0 32px;
+        font-size: 14px;
+        line-height: 44px;
+        letter-spacing: .5;
+    }
+
+    // &__btn-box {
+    //     a {
+    //         line-height: 52px;
+    //     }
+    //     transition: all .3s ease-in-out;
+    //     width: 100%;
+    //     &:hover {
+    //         transform: scale(1.02);
+    //     }
+    // }
 }
 
 @import 'media';
