@@ -5,10 +5,266 @@
 @import 'global';
 
 
+.header {
+    &__inner {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-basis: 100%;
+        padding-top: 20px;
+        padding-bottom: 74px;
+    }
+
+    &__logo-img {
+        max-width: 130px;
+        width: 100%;
+        margin-right: 60px;
+    }
+
+    &__menu {
+
+        flex-basis: 100%;
+
+    }
+
+    &__menu-list {
+        display: flex;
+
+        li+li {
+            margin-left: 40px;
+        }
+
+        a {
+            font-weight: 700;
+            color: $text;
+            text-transform: capitalize;
+            transition: all .3s;
+
+            &:hover {
+                color: $accent;
+            }
+        }
+    }
+
+    &__action-box {
+        flex-basis: 100%;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        text-align: center;
+
+        a {
+            padding-left: 27px;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+    }
+
+    &__btn-consultation {
+        margin-right: 37px;
+        padding: 0 40px;
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            transform: scale(1.03);
+        }
+    }
+
+    &__btn-login {
+        position: relative;
+        color: $text;
+        transition: all .3s;
+
+        &:hover {
+            color: $accent;
+        }
+
+    }
+
+    &__user-icon {
+        position: absolute;
+        top: 3px;
+        left: 0;
+
+    }
+}
+
+.footer {
+    &__inner {
+        padding: 80px 0 60px 0;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        flex-basis: 100%;
+        color: #fff;
+    }
+
+    &__info-box {
+        margin-bottom: 40px;
+    }
+
+    &__logo-img {
+        max-width: 130px;
+        width: 100%;
+        margin-bottom: 24px;
+    }
+
+    &__text {
+        width: 280px;
+        font-size: 12px;
+        line-height: 18px;
+        opacity: .6;
+        color: #fff;
+        margin-right: 80px;
+        margin-bottom: 40px;
+    }
+
+    &__social-list {
+        display: flex;
+
+        li {
+            opacity: .6;
+        }
+
+        li:hover {
+            opacity: 1;
+        }
+
+        li+li {
+            margin-left: 23px;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        justify-content: space-between;
+        // flex-basis: 100%;
+        margin-right: 80px;
+        margin-bottom: 40px;
+
+        a {
+            color: #fff;
+            opacity: .6;
+        }
+
+        a:hover {
+            opacity: 1;
+        }
+
+        li+li {
+            margin-top: 8px;
+        }
+    }
+
+    &__menu-box {
+        width: 120px;
+        margin: 0 10px;
+    }
+
+    &__menu-title {
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 12px;
+    }
+
+    &__form {
+        max-width: 286px;
+        width: 100%;
+        position: relative;
+    }
+
+    &__form-title {
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 24px;
+    }
+
+    &__form-input {
+
+        width: 100%;
+        padding: 9px 12px;
+        background: rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 4px;
+        color: #fff;
+        border: none;
+        margin-bottom: 12px;
 
 
+    }
 
+    &__arrow-img {
+        position: absolute;
+        width: 12px;
+        height: 7px;
+        top: 70px;
+        right: 15px;
+    }
+
+    &__form-descr {
+        font-size: 10px;
+        line-height: 15px;
+    }
+}
+
+
+.subscribe {
+    
+    &__inner {
+        padding: 120px 0 180px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+    }
+
+    &__suptitle {
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: $title;
+        margin-bottom: 8px;
+    }
+    &__title {
+        max-width: 810px;
+        font-size: 46px;
+        line-height: 62px;
+        font-weight: 900;
+        text-align: center;
+        color: $title;
+        margin-bottom: 60px;
+    }
+   
+    &__input {
+        width: 422px;
+        margin-right: 24px;
+        padding: 14px 16px;
+    }
+    &__btn {
+        padding: 0 40px;
+        cursor: pointer;
+    }
+    &-left__img,
+    &-right__img {
+        position: absolute;
+        bottom: 0;
+    }
+    &-left__img {
+        left: 0;
+    }
+    &-right__img {
+        right: 0;
+    }
+}
+
+.hero {
+    &__inner {
+        padding: 50px 0 80px 0;
+    }
+}
 
 @import 'media';
-
-
