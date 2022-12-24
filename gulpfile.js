@@ -41,6 +41,7 @@ function images() {
 function scripts() {
   return src([
     'node_modules/jquery/dist/jquery.js',
+    'node_modules/slick-carousel/slick/slick.min.js',
     'node_modules/wowjs/dist/wow.js',
     'app/js/main.js'
   ])

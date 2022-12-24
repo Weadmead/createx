@@ -185,9 +185,12 @@
         background: rgba(255, 255, 255, 0.12);
         border: 1px solid rgba(255, 255, 255, 0.2);
         border-radius: 4px;
-        color: #fff;
+        color: #787a80;        
         border: none;
         margin-bottom: 12px;
+        &:focus {
+            background-color: #fff;
+        }
 
 
     }
@@ -203,6 +206,16 @@
     &__form-descr {
         font-size: 10px;
         line-height: 15px;
+    }
+    &__copy-text{
+        color: #fff;
+        font-size: 12px;
+        line-height: 15px;
+        padding: 20px 0;
+        background-color:  #292c37;    
+        opacity: .5;
+        text-align: center;
+     
     }
 }
 
@@ -603,6 +616,21 @@
         border: 1px solid transparent;
         transition: all .2s;
         position: relative;
+        & + .benefits__tab-item {
+            margin-left: 4px;
+        }
+      
+        &.benefits__tab-item--active  {
+            border: 1px solid $accent;
+            border-radius: 4px;
+            color: $accent;
+            box-shadow: 0px 80px 80px -20px rgba(255, 63, 58, 0.16), 0px 30px 24px -10px rgba(255, 63, 58, 0.1), 0px 12px 10px -6px rgba(255, 63, 58, 0.08), 0px 4px 4px -4px rgba(30, 33, 44, 0.05);
+
+            svg {
+                stroke: #FF3F3A;
+
+            }
+        }
 
         svg {
             position: absolute;
@@ -626,6 +654,7 @@
         }
 
     }
+  
 
     &__content-item {
         display: flex;
@@ -743,5 +772,169 @@
         width: 215px;
     }
 }
+
+
+.expertise {
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 120px;
+        position: relative;
+    }
+    &__suptitle {
+        @extend %title-sup;
+        text-align: left;
+    }
+    &__info-box {
+        max-width: 392px;
+        width: 100%;
+    }
+    &__title {
+        @extend %title;
+        text-align: left;      
+        margin-bottom: 48px;
+    }
+    &__text {
+        margin-bottom: 8px;
+    }
+    &__partners-box {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 96px;
+    }
+    &__image-box {
+        position: absolute;
+        right: 0;
+        bottom: -140px;
+       
+        img {
+            transition: all .3s ease-in-out;
+        }
+        &:hover {
+            img {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+
+.team {
+    &__inner {
+        padding: 166px 0 180px 0;
+    }
+    &__title-box {
+        margin-bottom: 60px;
+    }
+    &__suptitle {
+        text-align: left;
+        @extend %title-sup;
+    }
+    &__title {
+        text-align: left;
+        @extend %title;
+    }
+    &__slider {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__slider-item {
+        max-width: 285px;
+        width: 100%;
+        text-align: center;
+        transition: all .5s ease-in-out;        
+        margin: 0px 15px 10px 15px;
+        &:hover {
+            .team__slider-imgbox:after {
+               display: block;   
+              
+            }
+            .team__slider-links {
+                display: block;
+            }
+        }
+    }
+    &__slider-imgbox {
+        position: relative;
+        background-color: #FFCF2D;
+        margin-bottom: 16px;
+        overflow: hidden;
+        transition: all .5s ease-in-out;
+        &:after {
+            position: absolute;           
+            content: "";
+            width: 100%;
+            top: 0;
+            right: 0;
+            left: 0;            
+            bottom: 0;
+           
+            display: none;
+            background: linear-gradient(180deg, rgba(30, 33, 44, 0) 43.9%, rgba(30, 33, 44, 0.03) 55.21%, rgba(30, 33, 44, 0.33) 68.73%, rgba(30, 33, 44, 0.56) 76.17%, rgba(30, 33, 44, 0.768225) 83.75%, rgba(30, 33, 44, 0.92) 91.49%, #1E212C 100%);
+        }
+        
+       
+    }
+    &__slider-img {
+      border-radius: 4px;
+       
+    }
+   
+    &__slider-links {  
+        position: absolute;
+        bottom: 20px;       
+        right: 20px;
+        z-index: 10;  
+        display: none;  
+         
+      
+    }
+    &__icon {
+        opacity: .6;  
+        &:hover {
+            opacity: 1;
+        }
+        & + .team__icon {
+            margin-left: 19px;
+        }
+    }
+
+    &__slider-name {
+        @extend %title-sml;
+        margin-bottom: 4px;
+    }
+    &__slider-position {
+        color: #787A80;
+    }
+  
+}
+
+.slick-arrow {
+    position: absolute;
+    top: -80px;
+    width: 48px;
+    height: 48px;  
+    fill: $title;
+    stroke: $title;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+.slick-arrow:hover {     
+    fill: #fff;
+    stroke: #fff;
+    background-color: $accent;    
+    width: 48px;
+    height: 48px;
+}
+.left-arrow {
+    right: 70px;
+}
+.right-arrow {
+    right: 10px;
+}
+
+
+
 
 @import 'media';
