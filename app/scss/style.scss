@@ -63,7 +63,7 @@
 
     &__btn-consultation {
         margin-right: 37px;
-        padding: 0 40px;
+       
 
     }
 
@@ -219,11 +219,7 @@
     }
 
     &__suptitle {
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        font-weight: 700;
-        color: $title;
-        margin-bottom: 8px;
+        @extend %title-sup;
     }
 
     &__title {
@@ -245,9 +241,8 @@
     }
 
     &__btn {
-        padding: 0 40px;
-        cursor: pointer;
-        border: 1px solid #FF3F3A;
+        padding: 13px 40px;
+       
     }
 
     &-left__img,
@@ -403,11 +398,7 @@
     }
 
     &__suptitle {
-        text-transform: uppercase;
-        color: $title;
-        margin-bottom: 8px;
-        font-size: 16px;
-        font-weight: 700;
+        @extend %title-sup;
     }
 
     &__title {
@@ -471,12 +462,7 @@
     }
 
     &__suptitle {
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        color: $text;
-        font-weight: 700;
-        font-size: 16px;
-        margin-bottom: 8px;
+        @extend %title-sup;
     }
 
     &__title {
@@ -594,12 +580,7 @@
     }
 
     &__suptitle {
-        font-weight: 700;
-        color: $title;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        font-size: 16px;
-        margin-bottom: 8px;
+        @extend %title-sup;
     }
 
     &__title {
@@ -620,17 +601,18 @@
         color: #9A9CA5;
         font-weight: 700;
         border: 1px solid transparent;
-        transition: all .2s;   
-        position: relative;      
-        
+        transition: all .2s;
+        position: relative;
+
         svg {
             position: absolute;
             width: 16px;
             height: 16px;
             left: 44px;
-            top: 14px;     
-    
+            top: 14px;
+
         }
+
         &:hover {
             border: 1px solid $accent;
             border-radius: 4px;
@@ -639,24 +621,28 @@
 
             svg {
                 stroke: #FF3F3A;
-                
+
             }
         }
 
     }
-    &__content-item{
+
+    &__content-item {
         display: flex;
         justify-content: space-between;
         align-items: center;
         display: none;
+
         &.benefits__content-item--active {
             display: flex;
         }
     }
+
     &__content-info {
         max-width: 495px;
         width: 100%;
     }
+
     &__content-title {
         font-size: 32px;
         line-height: 42px;
@@ -664,13 +650,98 @@
         color: $title;
         margin-bottom: 24px;
     }
+
     &__content-text {
         margin-bottom: 15px;
     }
+
     &__image {
         object-fit: cover;
     }
- 
+
+}
+
+
+.events {
+    &__inner {
+        padding: 80px 0;
+    }
+
+    &__suptitle {
+        @extend %title-sup;
+    }
+
+    &__title {
+        @extend %title;
+    }
+    &__title-box {
+        margin-bottom: 60px;
+    }
+    &__content {
+        margin-bottom: 60px;
+    }
+    &__content-item {
+        background-color: #fff;
+        display: flex; 
+        padding: 32px 40px;
+        align-items: center;
+        margin-bottom: 24px;
+        transition: all .3s;
+        border-radius: 4px;
+        position: relative;
+        &:hover {
+            box-shadow: 0px 80px 80px -20px rgba(255, 63, 58, 0.16), 0px 30px 24px -10px rgba(255, 63, 58, 0.1), 0px 12px 10px -6px rgba(255, 63, 58, 0.08), 0px 4px 4px -4px rgba(30, 33, 44, 0.05);
+            transform: scale(1.02)
+        }
+    }
+
+    &-item__month {
+        @extend %title-sml;
+    }
+    &-item__time {
+        color: #787A80;
+
+    }
+    &-item__day {
+        font-size: 48px;
+        line-height: 62px;
+        letter-spacing: 1px;
+        color: #FF3F3A;
+        font-weight: 900;
+        margin-right: 20px;
+    }
+
+    &-item__info {
+        padding: 0 40px;
+        max-width: 757px;
+        width: 100%;
+    }
+    &-item__link {
+        @extend %title-sml;
+    }
+    &-item__descr {
+        color: #787A80;
+    }
+  
+    &__btn {
+        display: flex;
+        
+    }
+    &__bottom {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__bottom-text {
+        font-size: 28px;
+        line-height: 42px;
+        font-weight: 700;
+        color: $title;
+        margin-right: 40px;
+    }
+    &__bottom-btn {
+        width: 215px;
+    }
 }
 
 @import 'media';
