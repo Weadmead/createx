@@ -799,6 +799,11 @@
         justify-content: space-between;
         padding-top: 120px;
         position: relative;
+        &.expertise__courses-page {
+            .expertise__image-box {
+                position: static;
+            }
+        }
     }
 
     &__suptitle {
@@ -985,6 +990,9 @@
         display: flex;
         flex-direction: column;
         padding-bottom: 160px;
+        &.testimonials__courses-page {
+            padding: 80px 0 100px 0;
+        }
 
     }
 
@@ -1279,7 +1287,7 @@
 
 .courses-list {
     &__inner {
-        
+
         padding-bottom: 120px;
     }
 
@@ -1384,33 +1392,39 @@
             transform: scale(1.02);
         }
     }
+
     &__load-box {
         display: flex;
         justify-content: center;
-        flex-basis: 100% ;
-        width: 130px;   
+        flex-basis: 100%;
+        width: 130px;
         margin: 0 auto;
         transition: all .3s;
+        cursor: pointer;
         &:hover {
             svg {
                 stroke: $accent;
                 
-            } 
-        }
-      
+            }
 
-       
+            .courses-list__link {
+                color: $accent;
+            }
+        }
+
+
     }
+
     &__link {
-        font-weight: 700;        
-        text-align: center;        
+        font-weight: 700;
+        text-align: center;
         display: block;
         margin-left: 20px;
         transition: all .3s;
-       
+
         &:hover {
             color: $accent;
-             
+
         }
     }
 
