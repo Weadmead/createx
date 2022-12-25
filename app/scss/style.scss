@@ -998,18 +998,18 @@
         margin-bottom: 60px;
     }
 
-    &__slider {       
-        margin: 0 auto;       
+    &__slider {
+        margin: 0 auto;
         max-width: 1020px;
         width: 100%;
-       
+
     }
 
-    &__content-box {      
+    &__content-box {
         background-color: #fff;
         padding: 64px 105px 64px 165px;
         position: relative;
-        
+        margin-bottom: 60px;
     }
 
     &__content-text {
@@ -1043,6 +1043,7 @@
         top: 64px;
         left: 105px;
     }
+
     .slick-arrow {
         position: absolute;
         top: -80px;
@@ -1072,6 +1073,192 @@
         right: -90px;
         top: 150px;
     }
+
+    .slick-dots {
+        li {
+            width: 30px;
+            height: 3px;
+            background-color: #B3B7BC;
+        }
+
+        li.slick-active {
+            background-color: $text;
+        }
+    }
+}
+
+
+.blog {
+    &__inner {
+        padding: 120px 0 180px 0;
+        position: relative;
+
+    }
+
+    &__title-box {
+        max-width: 400px;
+        width: 100%;
+        margin-bottom: 60px;
+    }
+
+    &__suptitle {
+        @extend %title-sup;
+        text-align: left;
+    }
+
+    &__title {
+        @extend %title;
+        text-align: left;
+    }
+
+    &-page__btn {
+        position: absolute;
+        right: 0;
+        top: 150px;
+    }
+
+    &__posts {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+         
+    }
+
+    &__post {
+        max-width: 390px;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    &-post__image-box {
+        position: relative;
+    }
+
+    &-post__image {
+        object-fit: cover;
+        width: 390px;
+    }
+
+    &-post__image-descr {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        background-color: #fff;
+        font-size: 14px;
+        border-radius: 4px;
+        padding: 1px 8px 1px 28px;
+        text-transform: capitalize;
+        text-align: center;
+
+        // &::before {
+        //     content: "";
+        //     width: 12px;
+        //     height: 12px;
+        //     color: $title;
+        //     background-image: url(../images/icons/twitter.svg);
+        //     background-size: cover;
+        //     background-repeat: no-repeat;
+        //     position: absolute;
+        //     left: 10px;
+        //     top: 7px;
+        // }        
+        svg {
+            position: absolute;
+            top: 7px;
+            left: 10px;
+        }
+    }
+
+    &-post__descrption-box {
+        display: flex;
+        font-size: 14px;
+        color: #787A80;
+        margin-top: 16px;
+        margin-bottom: 8px;
+        line-height: 18px;
+    }
+
+    &-post__category {
+        transition: all .3s;
+        width: 64px;
+        &:hover {
+            color: $accent;
+            font-weight: 700;
+        }
+    }
+    &-post__descrption-item {
+        & + .blog-post__descrption-item {
+            margin-left: 12px;
+            padding-left: 36px;
+            position: relative;
+            &::before {
+                content: "";
+                width: 1px;
+                height: 12px;
+                position: absolute;
+                background-color: #787A80;
+                left: 0;
+                top: 4px;
+            }
+        }
+    }
+   
+    &-post__date::after {
+        content: "";
+                width: 15px;
+                height: 15px;
+                position: absolute;
+                background-image: url(../images/post-calendar.png);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                left: 11px;
+                top: 2px;
+    }
+
+    &-post__duration::after {
+        content: "";
+                width: 15px;
+                height: 15px;
+                position: absolute;
+                background-image: url(../images/post-clock.png);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                left: 11px;
+                top: 2px;
+    }
+
+    &-post__title {
+        @extend %title-sml;
+        transition: all .3s;
+        &:hover {
+            color: $accent;
+        }
+    }
+    &-post__text {
+        margin-bottom: 16px;
+    }
+
+    &-post__btn {
+        font-weight: 700;
+        color: $title;
+        padding-right: 30px;
+        padding-bottom: 4px;
+        position: relative;
+        transition: all .3s;
+        text-transform: capitalize;
+        &:hover {            
+            color: $accent;
+        }
+        svg {
+           position: absolute;
+           top: 2px;
+           right: 5px;
+        }
+     
+    }
+
 }
 
 
