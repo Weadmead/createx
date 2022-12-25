@@ -799,6 +799,7 @@
         justify-content: space-between;
         padding-top: 120px;
         position: relative;
+
         &.expertise__courses-page {
             .expertise__image-box {
                 position: static;
@@ -990,6 +991,7 @@
         display: flex;
         flex-direction: column;
         padding-bottom: 160px;
+
         &.testimonials__courses-page {
             padding: 80px 0 100px 0;
         }
@@ -1309,7 +1311,6 @@
     &__categories {
         margin-bottom: 70px;
         display: flex;
-        justify-content: start;
 
         button {
             background-color: transparent;
@@ -1347,7 +1348,8 @@
     &__search-box {
         width: 315px;
         position: relative;
-        margin-left: 100px;
+        margin-left: 95px;
+
 
         input:focus-within {
 
@@ -1401,10 +1403,11 @@
         margin: 0 auto;
         transition: all .3s;
         cursor: pointer;
+
         &:hover {
             svg {
                 stroke: $accent;
-                
+
             }
 
             .courses-list__link {
@@ -1435,5 +1438,120 @@
 }
 
 
+//course-single page
+
+.course-single {
+    &__hero-inner {
+        padding: 50px 0 120px 0;
+    }
+
+    &__hero-box {
+        max-width: 1020px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    &__hero-suptitle {
+        @extend %title-sup;
+        color: $accent;
+        margin-bottom: 12px;
+        max-width: 320px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    &__hero-title {
+        @extend %title;
+
+    }
+}
+
+.join-course {
+    &__inner {
+        padding: 120px 0;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__info-box {
+        max-width: 600px;
+        width: 100%;
+        margin-bottom: 48px;
+       
+
+    }
+
+    &__title {
+        @extend %title;
+        margin-bottom: 40px;
+        text-align: left;
+    }
+    &__text {
+        margin-bottom: 48px;
+    }
+
+    &__description-box {
+        max-width: 495px;
+        width: 100%;
+        padding: 40px 32px;
+        border: 1px solid #E5E8ED;        
+        box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
+        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+    }
+    &__description-item {
+        padding-bottom: 32px;
+    }
+    &__description-head {
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $title;
+        margin-bottom: 4px;
+    }
+    &__description-line {
+        font-size: 24px;
+        line-height: 32px;
+        color: $accent;
+        font-weight: 700;
+        margin-bottom: 8px;
+    }
+    &__description-text {
+        color: #787A80;
+    }
+    &__description-btn {
+        text-align: center;
+    }
+
+    &__list {
+        max-width: 600px;
+        width: 100%;
+        li {
+            margin-bottom: 4px;
+            padding-left: 32px;
+            position: relative;
+            &::before {
+                content: "";
+                width: 15px;
+                height: 15px;
+                position: absolute;
+                background-image: url(../images/about-icon.png);
+                background-size: cover;
+                background-repeat: no-repeat;
+                left: 0;
+                top: 4px;
+            }
+        }
+    }
+    &__list-title {
+        font-size: 28px;    
+        line-height: 42px;
+        color: $title;
+        font-weight: 700;
+        margin-bottom: 24px;
+    }
+}
 
 @import 'media';

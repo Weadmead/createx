@@ -1,5 +1,7 @@
 $(function () {
 
+
+
     //slider section team
 
     $('.team__slider').slick({
@@ -35,5 +37,9 @@ $(function () {
         $($(this).attr('href')).addClass('benefits__content-item--active');
     });
 
+
+    if ($(".courses-list__content").length) {
+        let mixer = mixitup (".courses-list__content");
+      }
 
 });
