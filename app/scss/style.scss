@@ -1554,4 +1554,66 @@
     }
 }
 
+.curator {
+    &__inner {
+        padding: 60px 0 120px 0px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__info-box {
+        max-width: 600px;
+        width: 100%;
+        padding-top: 20px;
+    }
+    &__suptitle {
+        @extend %title-sup;
+        text-align: left;
+    }
+    &__author-name {
+        @extend %title;
+        text-align: left;
+        margin-bottom: 16px;
+    }
+    &__author-position {
+        font-size: 20px;
+        line-height: 30px;
+        color: #787A80;
+        margin-bottom: 30px;
+    }
+    &__list-info {
+        margin-bottom: 32px;            
+       
+    }
+    &__list-item  {
+        margin-bottom: 4px;
+        font-weight: 700;
+        padding-left: 24px;
+        position: relative;
+        img {
+            position: absolute;
+            left: 0;
+            top: 4px;
+        }
+    }
+    &__text {
+        margin-bottom: 42px;
+    }
+    &__social-list {
+        display: flex;
+        a:hover {
+            svg {
+                fill: $accent;
+            }
+        }
+        li + li {
+            margin-left: 30px;
+        }
+        svg {
+            width: 20px;
+            height: 20px;
+            fill: #787A80;
+        }
+    }
+}
+
 @import 'media';
