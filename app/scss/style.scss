@@ -1478,7 +1478,7 @@
         max-width: 600px;
         width: 100%;
         margin-bottom: 48px;
-       
+
 
     }
 
@@ -1487,6 +1487,7 @@
         margin-bottom: 40px;
         text-align: left;
     }
+
     &__text {
         margin-bottom: 48px;
     }
@@ -1495,15 +1496,17 @@
         max-width: 495px;
         width: 100%;
         padding: 40px 32px;
-        border: 1px solid #E5E8ED;        
+        border: 1px solid #E5E8ED;
         box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
         border-radius: 4px;
         display: flex;
         flex-direction: column;
     }
+
     &__description-item {
         padding-bottom: 32px;
     }
+
     &__description-head {
         font-size: 14px;
         font-weight: 700;
@@ -1511,6 +1514,7 @@
         color: $title;
         margin-bottom: 4px;
     }
+
     &__description-line {
         font-size: 24px;
         line-height: 32px;
@@ -1518,9 +1522,11 @@
         font-weight: 700;
         margin-bottom: 8px;
     }
+
     &__description-text {
         color: #787A80;
     }
+
     &__description-btn {
         text-align: center;
     }
@@ -1528,10 +1534,12 @@
     &__list {
         max-width: 600px;
         width: 100%;
+
         li {
             margin-bottom: 4px;
             padding-left: 32px;
             position: relative;
+
             &::before {
                 content: "";
                 width: 15px;
@@ -1545,8 +1553,9 @@
             }
         }
     }
+
     &__list-title {
-        font-size: 28px;    
+        font-size: 28px;
         line-height: 42px;
         color: $title;
         font-weight: 700;
@@ -1560,59 +1569,145 @@
         display: flex;
         justify-content: space-between;
     }
+
     &__info-box {
         max-width: 600px;
         width: 100%;
         padding-top: 20px;
     }
+
     &__suptitle {
         @extend %title-sup;
         text-align: left;
     }
+
     &__author-name {
         @extend %title;
         text-align: left;
         margin-bottom: 16px;
     }
+
     &__author-position {
         font-size: 20px;
         line-height: 30px;
         color: #787A80;
         margin-bottom: 30px;
     }
+
     &__list-info {
-        margin-bottom: 32px;            
-       
+        margin-bottom: 32px;
+
     }
-    &__list-item  {
+
+    &__list-item {
         margin-bottom: 4px;
         font-weight: 700;
         padding-left: 24px;
         position: relative;
+
         img {
             position: absolute;
             left: 0;
             top: 4px;
         }
     }
+
     &__text {
         margin-bottom: 42px;
     }
+
     &__social-list {
         display: flex;
+
         a:hover {
             svg {
                 fill: $accent;
             }
         }
-        li + li {
+
+        li+li {
             margin-left: 30px;
         }
+
         svg {
             width: 20px;
             height: 20px;
             fill: #787A80;
         }
+    }
+}
+
+
+.steps {
+    &__inner {
+        padding: 60px 0 120px 0;
+
+    }
+
+    &__title-box {
+        text-align: center;
+    }
+
+    &__suptitle {
+        @extend %title-sup;
+    }
+
+    &__title {
+        @extend %title;
+        margin-bottom: 60px;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__list-item {
+        max-width: 285px;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    &__list-num {
+        font-weight: 900;
+        font-size: 46px;
+        line-height: 60px;
+        color: #D7DADD;
+        transition: all .3s ease-in-out;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 84px;
+        height: 84px;
+        background: rgba(255, 63, 58, 0);
+        border-radius: 50%;
+        position: relative;
+        margin-bottom: 4px;
+        span {
+            width: 116px;
+            height: 116px;
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 63, 58, 0.0);
+            transition: all .3s ease-in-out;
+            transition-delay: .1s;
+        }
+        &:hover {
+            color: $accent;  
+            background: rgba(255, 63, 58, 0.12);    
+            span {
+                background: rgba(255, 63, 58, 0.06);
+            }     
+        }
+    }
+    &__list-title {
+        @extend %title-sml;
+        margin-bottom: 8px;
+    }
+    &__list-text {
+        color: #787A80;
     }
 }
 
