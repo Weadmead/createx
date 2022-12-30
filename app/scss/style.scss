@@ -1862,7 +1862,7 @@
     &__inner {
         display: flex;
         justify-content: space-between;
-
+        padding-bottom: 120px;
     }
 
 
@@ -1902,6 +1902,9 @@
                 opacity: 1;
                 height: auto;
             }
+        }
+        &.active::before {
+            content: "-";
         }
 
         &::before {
@@ -1949,6 +1952,93 @@
     }
 
 
+}
+
+.register {
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 100px;
+    }
+    &__suptitle {
+        @extend %title-sup;
+        text-align: left;
+    }
+    &__title {
+        @extend %title;
+        text-align: left;
+        margin-bottom: 40px;
+    }
+    &__form-box {
+        max-width: 495px;
+        width: 100%;
+        margin-left: 30px;
+    }
+    &__form {
+        
+        &.discount__form {
+            flex-direction: column;
+            input {
+                max-width: 495px;
+                width: 100%;              
+                margin-top: 8px;
+                margin-bottom: 24px;
+            }
+            .btn {
+                margin-top: 26px;                             
+            }
+            p {
+                align-self: center;
+                width: 100%;
+            }
+        }       
+    }
+ 
+}
+
+.other-courses {
+    .slick-initialized .slick-slide {
+        display: flex;
+    }
+    .slick-arrow {
+        position: absolute; 
+        top: -66px;
+        right: 0;
+        cursor: pointer;
+    }
+    .left-arrow {
+        right: 30px;
+    }
+    &__inner {
+        padding: 120px 0 180px 0;
+    }
+    &__suptitle {
+        @extend %title-sup;
+        text-align: left;
+        max-width: 240px;
+    }
+    &__title {
+        @extend %title;
+        text-align: left;
+        margin-bottom: 60px;
+        max-width: 440px;
+    }
+    &__slider {
+      position: relative;
+      margin-bottom: 80px;
+    }
+    &__btn-box {        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        span {
+            margin-right: 40px;
+            font-size: 28px;
+            line-height: 42px;
+            font-weight: 700;
+            color: $title;
+        }
+    }
 }
 
 
