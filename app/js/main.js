@@ -84,6 +84,18 @@ $(function () {
     $($(this).attr('href')).addClass('benefits__content-item--active');
   });
 
+
+  //events-filtration
+
+  $('.events-page__filter-list').on('click', function () {   
+    $('.events-page__content').removeClass('events__content-item--grid');
+    $('.events-page__content').addClass('events__content-item--list');
+  });
+  $('.events-page__filter-grid').on('click', function () {   
+    $('.events-page__content').removeClass('events__content-item--list');
+    $('.events-page__content').addClass('events__content-item--grid');
+  });
+
   $('.events-page__filter-btn').on('click', function () {   
     $('.events-page__filter-btn').removeClass('events-page__filter-btn--active');
     $(this).addClass('events-page__filter-btn--active');
