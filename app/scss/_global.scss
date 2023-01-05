@@ -32,13 +32,14 @@ body {
 
 .container-pink {
 	background-color: #fdddcf;
-	
+
 }
 
-.container-fluid.container-footer{
+.container-fluid.container-footer {
 	background-color: #1E212C;
 
 }
+
 .container-grey {
 	background-color: #F4F5F6;
 }
@@ -72,7 +73,7 @@ body {
 	color: $accent;
 	border: 1px solid #FF3F3A;
 	transition: all .3s ease-in-out;
-	
+
 	&:hover {
 		transform: scale(1.03);
 		background-color: #FF3F3A;
@@ -86,35 +87,102 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
 	&__list {
 		display: flex;
 		margin: 0 23px;
 	}
-	&__item + .pagination__item {
+
+	&__item+.pagination__item {
 		margin-left: 20px;
 	}
+
 	&__link {
 		font-weight: 700;
+
 		&:hover {
 			color: $accent;
 		}
-		
+
 	}
+
 	&__link--active {
-		color: $accent;			
+		color: $accent;
 	}
+
 	&__arrow {
 		display: flex;
 		align-items: center;
 		justify-content: center;
+
 		&:hover {
 			svg {
 				stroke: $accent;
 			}
-		}		
+		}
 	}
+
 	&__arrow--hide {
 		display: none;
 	}
-	
+
+}
+
+
+//subscribe box
+.subscribe-box {
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		padding: 104px 60px;
+		align-items: center;
+	}
+
+	&__image {
+		object-fit: cover;
+	}
+
+	&__content {
+		max-width: 600px;
+		width: 100%;
+		margin-left: 35px;
+	}
+
+	&__title {
+		font-size: 32px;
+		line-height: 42px;
+		font-weight: 900;
+		color: $title;
+		margin-bottom: 48px;
+	}
+
+	&__form {
+		label {
+			display: flex;
+			align-items: center;
+		}
+	}
+
+	&__line {
+		margin-bottom: 24px;
+		input {
+			padding: 13px 16px;
+			max-width: 422px;
+			width: 100%;
+			border: 1px solid #D7DADD;
+			border-radius: 4px;
+			margin-right: 22px;
+		}
+	}
+	&__checkbox {
+		margin-right: 15px;
+	}
+	.jq-checkbox {
+		border: none;
+		border-radius: 4px;
+	}
+	.jq-checkbox.checked {
+		background: $accent;
+		color: #fff;
+	}
 }
