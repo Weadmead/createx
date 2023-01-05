@@ -2460,4 +2460,19 @@
 }
 
 
+.lecture-speaker {
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 90px;
+    }
+    .sponsor__list {
+        display: flex;
+        margin-bottom: 42px;
+    }
+    .sponsor__list-item + .sponsor__list-item {
+        margin-left: 40px;
+    }
+}
+
 @import 'media';
