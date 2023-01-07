@@ -2351,7 +2351,7 @@
             justify-content: center;
             max-width: 390px;
             width: 100%;
-            padding: 0 130px;
+            padding: 0 125px;
         }
 
         .events__bottom {
@@ -2399,6 +2399,7 @@
         display: flex;
         justify-content: space-between;
     }
+
     &-theme__content-title {
         @extend %title;
         margin-bottom: 40px;
@@ -2414,13 +2415,15 @@
         max-width: 495px;
         width: 100%;
         padding: 40px 32px;
-        border: 1px solid #E5E8ED;  
+        border: 1px solid #E5E8ED;
         box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
         border-radius: 4px;
     }
+
     &-theme__info-item {
-      margin-bottom: 32px;      
+        margin-bottom: 32px;
     }
+
     &-theme__sup {
         font-size: 14px;
         line-height: 21px;
@@ -2432,6 +2435,7 @@
         width: 60px;
         display: block;
     }
+
     &-theme__ac {
         color: $accent;
         font-size: 24px;
@@ -2442,6 +2446,7 @@
         display: block;
         margin-bottom: 8px;
     }
+
     &-theme__link {
         display: block;
         text-transform: uppercase;
@@ -2453,6 +2458,7 @@
         letter-spacing: 1px;
         margin-bottom: 40px;
     }
+
     &-theme__btn {
         display: flex;
         justify-content: center;
@@ -2466,11 +2472,13 @@
         justify-content: space-between;
         margin-bottom: 90px;
     }
+
     .sponsor__list {
         display: flex;
         margin-bottom: 42px;
     }
-    .sponsor__list-item + .sponsor__list-item {
+
+    .sponsor__list-item+.sponsor__list-item {
         margin-left: 40px;
     }
 }
@@ -2478,4 +2486,88 @@
 .lecture-speaker.course-benefits {
     padding-top: 90px;
 }
+
+.register-box {
+    .register__inner {
+        padding: 120px 0;
+        align-items: center;
+
+        p {
+            position: relative;
+
+            sup {
+                position: absolute;
+                left: -10px;
+                top: -3px;
+            }
+        }
+    }
+}
+
+
+.events-slider {
+    .events-page__content-item {       
+        width: 100%;
+        margin: 0 15px;     
+        box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
+        border-radius: 4px;
+        border: 1px solid #E5E8ED;
+        padding: 16px;
+       
+    }   
+    .events-item__info {
+        padding: 0;
+        margin-bottom: 50px;
+    }
+
+    .events-item__time {
+        margin-bottom: 20px;
+    }
+    .events-item__link {
+        font-size: 18px;
+    }
+    .events__btn {
+        justify-content: center;        
+    }
+    .slick-arrow {
+        position: absolute;
+    }
+    .right-arrow {
+        top: -60px;
+        right: 0;
+        cursor: pointer;
+    }
+    .left-arrow {
+        top: -60px;
+        right: 40px;
+    }
+
+    &__inner {
+        padding: 100px 0 180px 0;
+    }
+
+    &__title-box {
+        margin-bottom: 60px;
+        text-align-last: left;
+    }
+
+    &__box {
+        margin-bottom: 80px;
+        position: relative;
+    }
+   
+    &__btn-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        span {
+            font-size: 28px;
+            line-height: 42px;
+            font-weight: 700;
+            color: $title;
+            margin-right: 40px;
+        }
+    }
+}
+
 @import 'media';

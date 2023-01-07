@@ -50,6 +50,16 @@ body {
 	padding: 0 15px;
 }
 
+.title {
+	@extend %title;
+}
+.suptitle {
+	@extend %title-sup;
+}
+.title-sml {
+	@extend %title-sml;
+}
+
 
 .btn {
 	background: $accent;
