@@ -45,6 +45,7 @@ function scripts() {
     'node_modules/mixitup/dist/mixitup.min.js',
     'node_modules/jquery-form-styler/dist/jquery.formstyler.min.js',
     'node_modules/wowjs/dist/wow.js',
+    'node_modules/@fancyapps/ui/dist/fancybox.umd.js',
     'app/js/main.js'
   ])
     .pipe(concat('main.min.js'))
