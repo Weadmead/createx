@@ -985,6 +985,21 @@
     .right-arrow {
         right: 10px;
     }
+    &__grid {
+        display: grid;
+        justify-items: center;
+        grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+        gap: 60px 30px;
+    }
+    &.team-grid {
+        .team__suptitle,
+        .team__title {
+            text-align: center;
+        }
+        .team__inner {
+            padding: 0 0 120px 0;
+        }
+    }
 
 }
 
@@ -1103,6 +1118,11 @@
 
         li.slick-active {
             background-color: $text;
+        }
+    }
+    &.ab-tst {
+        .testimonials__inner {
+            padding: 100px 0 180px 0;
         }
     }
 }
@@ -2812,6 +2832,74 @@
 
     }
 
+}
+
+.process {
+    &__inner {
+        display: flex;
+        justify-content: space-between;        
+        padding-bottom: 180px;
+    }
+    &__content {
+        max-width: 500px;
+        width: 100%;     
+    }
+    &__title-box {
+        text-align-last: left;
+        margin-bottom: 60px;
+    }
+    &__content-items {
+        padding-left: 40px;
+    }
+    &__content-item {
+        padding-bottom: 32px;
+        position: relative;
+        &:last-child {
+            padding-bottom: 0;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            width: 1px;
+            height: 100%;
+            background-color: #9A9CA5;
+            left: -36px;
+            top: 4px;
+            opacity: .5;
+        }
+    }
+    &-item__step {
+        font-size: 12px;
+        line-height: 18px;
+        font-weight: 900;
+        color: #787A80;
+        margin-bottom: 2px;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background-color: $accent;
+            left: -40px;
+            top: 4px;
+            z-index: 3;
+        }
+    }
+    &-item__name {
+        margin-bottom: 8px;
+    }
+    &-item__text {
+        color: #787A80;
+    }
+    &__image-box {
+        align-self: end;
+        margin-left: 40px;
+    }
+    &__image {
+        object-fit: cover;
+    }
 }
 
 @import 'media';
