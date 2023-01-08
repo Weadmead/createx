@@ -2902,4 +2902,16 @@
     }
 }
 
+.best-jobs {
+    &__inner {
+        padding-bottom: 75px;
+    }
+    &__items {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        grid-gap: 40px 102px;
+    }
+}
+
 @import 'media';
