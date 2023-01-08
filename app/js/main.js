@@ -118,6 +118,11 @@ $(function () {
   if ($(".courses-list__content").length) {
     let mixer = mixitup(".courses-list__content");
   }
+
+  //mixitup blog
+  if ($(".blog-page__content-items").length) {
+    let mixer = mixitup(".blog-page__content-items");
+  }
   
 
   //timer 

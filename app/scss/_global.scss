@@ -195,4 +195,14 @@ body {
 		background: $accent;
 		color: #fff;
 	}
+	.jq-checkbox.checked .jq-checkbox__div {
+		width: 8px;
+		height:6px;
+		margin: 3px 0 0 4px;
+		border-bottom: 2px solid #fff;
+		border-left: 2px solid #fff;
+		-webkit-transform: rotate(-50deg);
+		-ms-transform: rotate(-50deg);
+		transform: rotate(-50deg);
+	}
 }
