@@ -3543,6 +3543,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
         span {
             font-size: 28px;
             line-height: 42px;
@@ -3554,6 +3555,133 @@
 
 }
 
+
+//start contacts-page
+
+.contact-info {
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__map {
+        max-width: 705px;
+        width: 100%;
+    }
+
+    &__title {
+        margin-bottom: 40px;
+    }
+
+    &__title,
+    &__suptitle {
+        text-align: left;
+    }
+
+    &__list {
+        margin-bottom: 48px;
+        span {
+            display: block;
+            font-size: 14px;
+            line-height: 21px;
+            font-weight: 700;
+            color: #787A80;
+        }
+    }
+
+    &__item {
+        padding-left: 35px;
+        margin-bottom: 24px;
+
+        a {
+            font-size: 18px;
+            line-height: 27px;
+            color: $title;
+            transition: all .3s;
+
+            &:hover {
+                color: $accent;
+            }
+        }
+    }
+
+
+    &__email,
+    &__phone,
+    &__adress {
+        position: relative;
+    }
+
+    &__email:before {
+        content: "";
+        position: absolute;
+        background-image: url(../images/content/chat.png);
+        background-repeat: no-repeat;
+        width: 22px;
+        height: 20px;
+        left: 0px;
+        top: 0;
+    }
+
+    &__phone:before {
+        content: "";
+        position: absolute;
+        background-image: url(../images/content/phone.png);
+        background-repeat: no-repeat;
+        width: 14px;
+        height: 22px;
+        left: 0px;
+        top: 0;
+    }
+
+    &__adress:before {
+        content: "";
+        position: absolute;
+        background-image: url(../images/content/marker.png);
+        background-repeat: no-repeat;
+        width: 17px;
+        height: 22px;
+        left: 0px;
+        top: 0;
+    }
+
+    &__social {
+        span {
+            text-transform: uppercase;
+            color: $title;
+            letter-spacing: 1px;
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
+
+    }
+
+    &__social-list {
+        display: flex;
+        margin-top: 25px;
+
+        li+li {
+            margin-left: 40px;
+        }
+
+        li {
+            a {
+                svg {
+                    fill: #787A80;
+                }
+            }
+
+            a:hover {
+                svg {
+                    fill: $accent;
+                }
+            }
+        }
+
+    }
+
+}
 
 
 @import 'media';
